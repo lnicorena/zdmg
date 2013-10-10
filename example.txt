@@ -1,0 +1,7 @@
+- adicionar em db_table:
+	1. protected $_schema = 'patrimonio';
+	2. extends Configuracoes_Model_DbTable_TableAbstract
+
+cd c:\xampp\htdocs\zdmg
+php zend-db-model-generator.php --namespace Planejamento --database castor --schema plan --table tb_carteira_usuarios
+

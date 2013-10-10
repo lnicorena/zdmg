@@ -1,0 +1,17 @@
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tb_agenda_unidades
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tb_agendas
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tb_agendas_pessoas
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tb_depart_pessoas
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tb_empresas
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tb_empresas_departamentos
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tb_eventos
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tb_eventos_anexos
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tb_material_apoio_anexos
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tb_pessoas
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tba_atividades
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tba_frequencia_dias
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tba_macros_atividades
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tba_material_apoio
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tba_perfis
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tba_status
+php c:\xampp\htdocs\zdmg\zend-db-model-generator.php --namespace Cadastro --database castor --table tba_tipos_atividades
