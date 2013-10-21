@@ -44,7 +44,8 @@ class <?=$this->_namespace?>_<?=$this->_className?>Controller extends Zend_Contr
                         
                 } catch (Exception $e){
                     $this->feedback->addMessage('error'); $this->feedback->addMessage('Erro');
-                    $this->feedback->addMessage("Ocorreu um erro ao inserir o registro. Detalhes: ".$e->getMessage());
+                    $detalhes = (APPLICATION_ENV == "development" || $e->getCode() == 99) ? "Detalhes: {$e->getMessage()}" : "";
+                    $this->feedback->addMessage("Ocorreu um erro ao inserir o registro. {$detalhes}");
                 }
                 $this->_helper->redirector('index');
             } else {
@@ -77,7 +78,8 @@ class <?=$this->_namespace?>_<?=$this->_className?>Controller extends Zend_Contr
                         
                     } catch (Exception $e){
                         $this->feedback->addMessage('error'); $this->feedback->addMessage('Erro');
-                        $this->feedback->addMessage("Ocorreu um erro ao editar o registro. Detalhes: ".$e->getMessage());
+                        $detalhes = (APPLICATION_ENV == "development" || $e->getCode() == 99) ? "Detalhes: {$e->getMessage()}" : "";
+                        $this->feedback->addMessage("Ocorreu um erro ao editar o registro. {$detalhes}");
                     }
                     
                     $this->_helper->redirector('index');
@@ -105,13 +107,14 @@ class <?=$this->_namespace?>_<?=$this->_className?>Controller extends Zend_Contr
                     $this->feedback->addMessage("O registro <strong>{$this->model->nome}</strong> foi removido com sucesso!");
                 }  catch (Exception $e){
                     $this->feedback->addMessage('error'); $this->feedback->addMessage('Erro');
-                    $this->feedback->addMessage("Ocorreu um erro ao tentar remover o registro. Detalhes: ".$e->getMessage());
+                    $detalhes = (APPLICATION_ENV == "development" || $e->getCode() == 99) ? "Detalhes: {$e->getMessage()}" : "";
+                    $this->feedback->addMessage("Ocorreu um erro ao tentar remover o registro. {$detalhes}");
                 }
             }
             $this->_helper->redirector('index');
         } else {
             $id = $this->_getParam('id', 0);
-            $this->view->data = $this->mapper->get<?=$this->_className?>ById($id, true);
+            $this->view->dado = $this->mapper->get<?=$this->_className?>ById($id, true);
         }
     }    
 
