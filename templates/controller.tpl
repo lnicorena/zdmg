@@ -28,7 +28,7 @@ class <?=$this->_namespace?>_<?=$this->_className?>Controller extends Zend_Contr
     }
 
     public function adicionarAction() {
-        $this->form->submit->setLabel('Adicionar');
+        $this->form->submit->setLabel($this->form->submit->getLabel() . 'Adicionar');
         
         if ($this->getRequest()->isPost()) {
             $formulario = $this->getRequest()->getPost();
@@ -60,8 +60,7 @@ class <?=$this->_namespace?>_<?=$this->_className?>Controller extends Zend_Contr
         $id = intval($this->_getParam('id', 0));
 
         if ($id > 0) {
-            $this->form->submit->setLabel('Salvar');
-            $this->form->limpar->setAttrib('class','btn-voltar');
+            $this->form->submit->setLabel($this->form->submit->getLabel() . 'Salvar');
 
             if ($this->getRequest()->isPost()) {
                 $formulario = $this->getRequest()->getPost();
