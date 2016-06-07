@@ -31,7 +31,7 @@ REQUIREMENTS
 1. php-cli 5.2+
 2. PDO extension
 3. This script was only tested on MySQL and MS-SQL server. if it works on any other servers
-   please let me know.
+   please let me know. --Teste commit
 
 NOTICE
 ------
